@@ -1,0 +1,52 @@
+<!--
+
+Copyright 2023 Harshad Joshi and Bufferstack.IO Analytics Technology LLP, Pune.
+
+Licensed under the GNU General Public License, Version 3.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/gpl-3.0.html
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('spc',{
+        category: 'Bufferstack.IO',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            limitMultiplier: {value:2.66, required: true, validate: RED.validators.number()}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "node-red-dashboard/ui_chart.png",
+        label: function() {
+            return this.name||"spc";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="spc">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-limitMultiplier"><i class="icon-tag"></i> Control Limit Multiplier</label>
+        <input type="number" id="node-input-limitMultiplier" placeholder="2.66">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="spc">
+    <p>This is an SPC node used in industrial automation for quality control. It accepts a stream of individual values and performs a moving range SPC calculation. After accumulating a sufficient number of samples, it begins to output the average, upper control limit (UCL), lower control limit (LCL), and a flag indicating if the current value is out of control.</p>
+</script>
+
