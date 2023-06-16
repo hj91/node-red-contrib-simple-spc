@@ -53,7 +53,7 @@ https://github.com/hj91/node-red-contrib-spc
 ### Improved
 - Enhanced the status message to indicate the time that the process has been out of control, based on the new "Timer" setting.
 
-## Version 1.0 (Initial Release)
+### Version 1.0 (Initial Release)
 
 ### Added
 - SPCNode for statistical process control in industrial automation processes. 
