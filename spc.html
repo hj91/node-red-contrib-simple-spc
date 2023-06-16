@@ -16,19 +16,18 @@ limitations under the License.
 
 -->
 
-
-
 <script type="text/javascript">
     RED.nodes.registerType('spc',{
         category: 'Bufferstack.IO',
         color: '#a6bbcf',
         defaults: {
             name: {value:""},
-            limitMultiplier: {value:2.66, required: true, validate: RED.validators.number()}
+            limitMultiplier: {value:2.66, required: true, validate: RED.validators.number()},
+            timer: {value:60, required: true, validate: RED.validators.number()}
         },
         inputs:1,
         outputs:1,
-        icon: "node-red-dashboard/ui_chart.png",
+        icon: "font-awesome/fa-wrench",
         label: function() {
             return this.name||"spc";
         }
@@ -43,6 +42,10 @@ limitations under the License.
     <div class="form-row">
         <label for="node-input-limitMultiplier"><i class="icon-tag"></i> Control Limit Multiplier</label>
         <input type="number" id="node-input-limitMultiplier" placeholder="2.66">
+    </div>
+    <div class="form-row">
+        <label for="node-input-timer"><i class="icon-tag"></i> Timer (seconds)</label>
+        <input type="number" id="node-input-timer" placeholder="60">
     </div>
 </script>
 
