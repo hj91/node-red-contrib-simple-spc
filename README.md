@@ -21,7 +21,7 @@ If a data point falls outside of the UCL or LCL, then the process is considered 
 To install the Node-RED SPC Node, simply run the following command:
 
 ```
-npm install node-red-contrib-spc
+npm install node-red-contrib-simple-spc
 ```
 
 Once the node is installed, you can add it to your Node-RED flow by dragging and dropping it onto the canvas.
@@ -39,7 +39,7 @@ This node was created by Harshad Joshi.
 The source code for this node is available on GitHub:
 
 ```
-https://github.com/hj91/node-red-contrib-spc
+https://github.com/hj91/node-red-contrib-simple-spc
 ```
 
 ## Changelog for SPCNode (Statistical Process Control Node)
@@ -53,7 +53,7 @@ https://github.com/hj91/node-red-contrib-spc
 ### Improved
 - Enhanced the status message to indicate the time that the process has been out of control, based on the new "Timer" setting.
 
-### Version 1.0 (Initial Release)
+## Version 1.0 (Initial Release)
 
 ### Added
 - SPCNode for statistical process control in industrial automation processes. 
